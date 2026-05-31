@@ -11,7 +11,7 @@ const SalePage = ({ onAddToCart }: SalePageProps) => {
     { id: 402, image: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80', title: 'Running Sneakers', originalPrice: '$119.99', price: '$89.99', discount: 25 },
     { id: 403, image: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=600&q=80', title: 'Casual Loafers', originalPrice: '$99.99', price: '$79.99', discount: 20 },
     { id: 404, image: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80', title: 'Sports Shoes', originalPrice: '$139.99', price: '$109.99', discount: 21 },
-    { id: 405, image: 'https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=600&q=80', title: 'Women Sneakers', originalPrice: '$199.99', price: '$149.99', discount: 25 },
+    { id: 405, image: 'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=600&q=80', title: 'Women Sneakers', originalPrice: '$199.99', price: '$149.99', discount: 25 },
     { id: 406, image: 'https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=600&q=80', title: 'Premium Leather Boots', originalPrice: '$249.99', price: '$189.99', discount: 24 },
     { id: 407, image: 'https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=600&q=80', title: 'Sporty Runners', originalPrice: '$199.99', price: '$159.99', discount: 20 },
     { id: 408, image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80', title: 'Athletic Trainers', originalPrice: '$149.99', price: '$119.99', discount: 20 },
