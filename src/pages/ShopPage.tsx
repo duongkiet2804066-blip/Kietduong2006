@@ -13,7 +13,7 @@ const ShopPage = ({ onAddToCart }: ShopPageProps) => {
     { id: 304, image: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=600&q=80', title: 'Casual Loafers', price: '$79.99', category: 'Men' },
     { id: 305, image: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80', title: 'Sports Shoes', price: '$109.99', category: 'Unisex' },
     { id: 306, image: 'https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&q=80', title: 'Formal Oxfords', price: '$149.99', category: 'Men' },
-    { id: 307, image: 'https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=600&q=80', title: 'Premium Leather Boots', price: '$189.99', category: 'Men' },
+    { id: 307, image: 'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=600&q=80', title: 'Premium Leather Boots', price: '$189.99', category: 'Men' },
     { id: 308, image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80', title: 'Athletic Trainers', price: '$119.99', category: 'Unisex' },
     { id: 309, image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600&q=80', title: 'Vintage Sneakers', price: '$99.99', category: 'Women' },
     { id: 310, image: 'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=600&q=80', title: 'Summer Sneakers', price: '$59.99', category: 'Women' },
