@@ -8,7 +8,7 @@ interface ShopPageProps {
 const ShopPage = ({ onAddToCart }: ShopPageProps) => {
   const products = [
     { id: 301, image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80', title: 'Classic Leather Shoes', price: '$129.99', category: 'Men' },
-    { id: 302, image: 'https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=600&q=80', title: 'Designer Sneakers', price: '$159.99', category: 'Women' },
+    { id: 302, image: 'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=600&q=80', title: 'Designer Sneakers', price: '$159.99', category: 'Women' },
     { id: 303, image: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80', title: 'Running Sneakers', price: '$89.99', category: 'Men' },
     { id: 304, image: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=600&q=80', title: 'Casual Loafers', price: '$79.99', category: 'Men' },
     { id: 305, image: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80', title: 'Sports Shoes', price: '$109.99', category: 'Unisex' },
