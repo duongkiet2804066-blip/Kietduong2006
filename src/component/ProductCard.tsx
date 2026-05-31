@@ -38,14 +38,15 @@ const ProductCard = ({ image, title, price, link = '#', badge, onAddToCart, onVi
     >
       {/* Image */}
       <div style={{ position: 'relative', overflow: 'hidden', height: 260 }}>
-        <div onClick={() => onViewDetail?.()} style={{ cursor: 'pointer' }}>
+        {/* FIX 1: <div onClick> đóng đúng chỗ - chỉ bao quanh <img> */}
+        <div onClick={() => onViewDetail?.()} style={{ cursor: 'pointer', height: '100%' }}>
           <img src={image} alt={title} style={{
             width: '100%', height: '100%', objectFit: 'cover',
             transform: hovered ? 'scale(1.07)' : 'scale(1)',
             transition: 'transform 0.6s cubic-bezier(0.25,0.8,0.25,1)',
             display: 'block',
           }} />
-
+        </div>{/* FIX 1: đóng div click ảnh tại đây, không bao phủ các phần tử bên dưới */}
 
         {/* Dark overlay */}
         <div style={{
@@ -53,6 +54,7 @@ const ProductCard = ({ image, title, price, link = '#', badge, onAddToCart, onVi
           background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%)',
           opacity: hovered ? 1 : 0.3,
           transition: 'opacity 0.3s',
+          pointerEvents: 'none', // overlay không chặn click
         }} />
 
         {/* Badge */}
@@ -115,10 +117,11 @@ const ProductCard = ({ image, title, price, link = '#', badge, onAddToCart, onVi
             )}
           </button>
         </div>
-      </div>
+      </div>{/* đóng div position:relative chứa ảnh */}
 
       {/* Info */}
       <div style={{ padding: '14px 16px 16px' }}>
+        {/* FIX 2: tách div rating ra khỏi div title+price để đóng tag đúng */}
         <div onClick={() => onViewDetail?.()} style={{ textDecoration: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8, cursor: 'pointer' }}>
           <h3 style={{
             margin: 0, fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.85)',
@@ -128,7 +131,9 @@ const ProductCard = ({ image, title, price, link = '#', badge, onAddToCart, onVi
             fontWeight: 900, fontSize: 15, color: '#e63946',
             whiteSpace: 'nowrap', fontFamily: "'Helvetica Neue', Arial, sans-serif",
           }}>{price}</span>
+        </div>{/* FIX 2: đóng div title+price tại đây */}
 
+        {/* FIX 3: div rating là phần tử riêng, không lồng bên trong div title */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8 }}>
           {[1,2,3,4,5].map(i => (
             <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill={i <= 4 ? '#e63946' : 'none'}>
