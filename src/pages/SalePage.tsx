@@ -7,16 +7,16 @@ interface SalePageProps {
 
 const SalePage = ({ onAddToCart }: SalePageProps) => {
   const products = [
-    { id: 401, image: '/images/card-image1.jpg', title: 'Classic Leather Shoes', originalPrice: '$179.99', price: '$129.99', discount: 28 },
-    { id: 402, image: '/images/card-image2.jpg', title: 'Running Sneakers', originalPrice: '$119.99', price: '$89.99', discount: 25 },
-    { id: 403, image: '/images/card-image3.jpg', title: 'Casual Loafers', originalPrice: '$99.99', price: '$79.99', discount: 20 },
-    { id: 404, image: '/images/card-image5.jpg', title: 'Sports Shoes', originalPrice: '$139.99', price: '$109.99', discount: 21 },
-    { id: 405, image: '/images/card-image6.jpg', title: 'Formal Oxfords', originalPrice: '$199.99', price: '$149.99', discount: 25 },
-    { id: 406, image: '/images/card-large-item1.jpg', title: 'Premium Leather Boots', originalPrice: '$249.99', price: '$189.99', discount: 24 },
-    { id: 407, image: '/images/card-large-item2.jpg', title: 'Designer Heels', originalPrice: '$199.99', price: '$159.99', discount: 20 },
-    { id: 408, image: '/images/card-large-item3.jpg', title: 'Athletic Trainers', originalPrice: '$149.99', price: '$119.99', discount: 20 },
-    { id: 409, image: '/images/card-large-item4.jpg', title: 'Vintage Sneakers', originalPrice: '$129.99', price: '$99.99', discount: 23 },
-    { id: 410, image: '/images/card-image1.jpg', title: 'Summer Sandals', originalPrice: '$79.99', price: '$59.99', discount: 25 },
+    { id: 401, image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80', title: 'Classic Leather Shoes', originalPrice: '$179.99', price: '$129.99', discount: 28 },
+    { id: 402, image: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80', title: 'Running Sneakers', originalPrice: '$119.99', price: '$89.99', discount: 25 },
+    { id: 403, image: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=600&q=80', title: 'Casual Loafers', originalPrice: '$99.99', price: '$79.99', discount: 20 },
+    { id: 404, image: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80', title: 'Sports Shoes', originalPrice: '$139.99', price: '$109.99', discount: 21 },
+    { id: 405, image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&q=80', title: 'Designer Heels', originalPrice: '$199.99', price: '$149.99', discount: 25 },
+    { id: 406, image: 'https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=600&q=80', title: 'Premium Leather Boots', originalPrice: '$249.99', price: '$189.99', discount: 24 },
+    { id: 407, image: 'https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=600&q=80', title: 'Elegant Pumps', originalPrice: '$199.99', price: '$159.99', discount: 20 },
+    { id: 408, image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80', title: 'Athletic Trainers', originalPrice: '$149.99', price: '$119.99', discount: 20 },
+    { id: 409, image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600&q=80', title: 'Vintage Sneakers', originalPrice: '$129.99', price: '$99.99', discount: 23 },
+    { id: 410, image: 'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=600&q=80', title: 'Summer Sandals', originalPrice: '$79.99', price: '$59.99', discount: 25 },
   ];
 
   return (
@@ -28,99 +28,46 @@ const SalePage = ({ onAddToCart }: SalePageProps) => {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="me-2" style={{ color: '#e63946' }}>
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" />
               </svg>
-              <div>
-                <strong>Limited Time Offer!</strong> Up to 40% off on selected items. Free shipping on orders over $100.
-              </div>
+              <div><strong>Limited Time Offer!</strong> Up to 40% off on selected items. Free shipping on orders over $100.</div>
             </div>
           </div>
         </div>
 
         <div className="row mb-4">
           <div className="col-12">
-            <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '36px', fontWeight: 900, color: '#e63946' }}>
-              Sale
-            </h1>
+            <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '36px', fontWeight: 900, color: '#e63946' }}>Sale</h1>
             <p className="text-muted">Don't miss out on these amazing deals!</p>
           </div>
         </div>
 
         <div className="row">
-          {/* Filters Sidebar */}
           <div className="col-lg-3 mb-4">
-            <div style={{
-              background: '#f8f9fa',
-              borderRadius: '12px',
-              padding: '20px',
-              position: 'sticky',
-              top: '100px'
-            }}>
+            <div style={{ background: '#f8f9fa', borderRadius: '12px', padding: '20px', position: 'sticky', top: '100px' }}>
               <h5 className="mb-3">Filters</h5>
-              
               <div className="mb-4">
                 <h6 className="fw-bold mb-2">Discount</h6>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" defaultChecked />
-                  <label className="form-check-label">20% - 30%</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" defaultChecked />
-                  <label className="form-check-label">30% - 40%</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" />
-                  <label className="form-check-label">40%+</label>
-                </div>
+                {[['20% - 30%', true],['30% - 40%', true],['40%+', false]].map(([label, checked]) => (
+                  <div className="form-check" key={label as string}><input className="form-check-input" type="checkbox" defaultChecked={checked as boolean} /><label className="form-check-label">{label as string}</label></div>
+                ))}
               </div>
-
               <div className="mb-4">
                 <h6 className="fw-bold mb-2">Category</h6>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" defaultChecked />
-                  <label className="form-check-label">Casual Shoes</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" defaultChecked />
-                  <label className="form-check-label">Formal Shoes</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" defaultChecked />
-                  <label className="form-check-label">Sneakers</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" defaultChecked />
-                  <label className="form-check-label">Boots</label>
-                </div>
+                {['Casual Shoes','Formal Shoes','Sneakers','Boots'].map(c => (
+                  <div className="form-check" key={c}><input className="form-check-input" type="checkbox" defaultChecked /><label className="form-check-label">{c}</label></div>
+                ))}
               </div>
-
               <div className="mb-4">
                 <h6 className="fw-bold mb-2">Size</h6>
                 <div className="d-flex flex-wrap gap-2">
-                  {['35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45'].map(size => (
-                    <button
-                      key={size}
-                      className="btn btn-outline-secondary btn-sm"
-                      style={{ width: '36px', height: '36px', padding: 0, fontSize: '12px' }}
-                    >
-                      {size}
-                    </button>
+                  {['35','36','37','38','39','40','41','42','43','44','45'].map(size => (
+                    <button key={size} className="btn btn-outline-secondary btn-sm" style={{ width: '36px', height: '36px', padding: 0, fontSize: '12px' }}>{size}</button>
                   ))}
                 </div>
               </div>
-
-              <div className="mb-4">
-                <h6 className="fw-bold mb-2">Price Range</h6>
-                <input type="range" className="form-range" min="0" max="300" />
-                <div className="d-flex justify-content-between">
-                  <span className="text-muted">$0</span>
-                  <span className="text-muted">$300</span>
-                </div>
-              </div>
-
               <button className="btn btn-dark w-100">Apply Filters</button>
             </div>
           </div>
 
-          {/* Products Grid */}
           <div className="col-lg-9">
             <div className="d-flex justify-content-between align-items-center mb-3">
               <span className="text-muted">{products.length} sale items</span>
@@ -139,47 +86,13 @@ const SalePage = ({ onAddToCart }: SalePageProps) => {
                     title={product.title}
                     price={product.price}
                     badge={`-${product.discount}%`}
-                    onAddToCart={() => onAddToCart({
-                      id: product.id,
-                      image: product.image,
-                      title: product.title,
-                      price: parseFloat(product.price.replace('$', '')),
-                      size: '42'
-                    })}
+                    onAddToCart={() => onAddToCart({ id: product.id, image: product.image, title: product.title, price: parseFloat(product.price.replace('$', '')), size: '42' })}
                   />
                   <div className="text-center mt-2">
-                    <span className="text-muted text-decoration-line-through" style={{ fontSize: '14px' }}>
-                      {product.originalPrice}
-                    </span>
+                    <span className="text-muted text-decoration-line-through" style={{ fontSize: '14px' }}>{product.originalPrice}</span>
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* Newsletter Banner */}
-            <div className="row mt-5">
-              <div className="col-12">
-                <div style={{
-                  background: 'linear-gradient(135deg, #1a1a1a 0%, #333 100%)',
-                  borderRadius: '16px',
-                  padding: '40px',
-                  color: '#fff',
-                  textAlign: 'center'
-                }}>
-                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", marginBottom: '16px' }}>
-                    Get Extra 10% Off
-                  </h3>
-                  <p className="mb-4">Subscribe to our newsletter and receive an exclusive discount code</p>
-                  <div className="row justify-content-center">
-                    <div className="col-md-6">
-                      <div className="input-group">
-                        <input type="email" className="form-control" placeholder="Enter your email" />
-                        <button className="btn btn-danger" type="button">Subscribe</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
