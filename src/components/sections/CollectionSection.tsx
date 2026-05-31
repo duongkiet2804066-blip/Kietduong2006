@@ -71,7 +71,7 @@ const CollectionSection = ({ onNavigate }: CollectionSectionProps) => (
             border: '1px solid rgba(255,255,255,0.06)',
           }}>
             <img
-              src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=80"
+              src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=80"
               alt="Women's Collection"
               style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }}
               onMouseEnter={(e) => ((e.target as HTMLImageElement).style.transform = 'scale(1.06)')}
