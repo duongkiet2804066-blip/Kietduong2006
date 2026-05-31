@@ -7,9 +7,10 @@ interface ProductCardProps {
   link?: string;
   badge?: string;
   onAddToCart?: () => void;
+  onViewDetail?: () => void;
 }
 
-const ProductCard = ({ image, title, price, link = '#', badge, onAddToCart }: ProductCardProps) => {
+const ProductCard = ({ image, title, price, link = '#', badge, onAddToCart, onViewDetail }: ProductCardProps) => {
   const [hovered, setHovered] = useState(false);
   const [adding, setAdding] = useState(false);
   const [wishlisted, setWishlisted] = useState(false);
@@ -37,14 +38,14 @@ const ProductCard = ({ image, title, price, link = '#', badge, onAddToCart }: Pr
     >
       {/* Image */}
       <div style={{ position: 'relative', overflow: 'hidden', height: 260 }}>
-        <a href={link}>
+        <div onClick={() => onViewDetail?.()} style={{ cursor: 'pointer' }}>
           <img src={image} alt={title} style={{
             width: '100%', height: '100%', objectFit: 'cover',
             transform: hovered ? 'scale(1.07)' : 'scale(1)',
             transition: 'transform 0.6s cubic-bezier(0.25,0.8,0.25,1)',
             display: 'block',
           }} />
-        </a>
+
 
         {/* Dark overlay */}
         <div style={{
@@ -118,7 +119,7 @@ const ProductCard = ({ image, title, price, link = '#', badge, onAddToCart }: Pr
 
       {/* Info */}
       <div style={{ padding: '14px 16px 16px' }}>
-        <a href={link} style={{ textDecoration: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
+        <div onClick={() => onViewDetail?.()} style={{ textDecoration: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8, cursor: 'pointer' }}>
           <h3 style={{
             margin: 0, fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.85)',
             lineHeight: 1.4, letterSpacing: '0.02em',
@@ -127,7 +128,7 @@ const ProductCard = ({ image, title, price, link = '#', badge, onAddToCart }: Pr
             fontWeight: 900, fontSize: 15, color: '#e63946',
             whiteSpace: 'nowrap', fontFamily: "'Helvetica Neue', Arial, sans-serif",
           }}>{price}</span>
-        </a>
+
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8 }}>
           {[1,2,3,4,5].map(i => (
             <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill={i <= 4 ? '#e63946' : 'none'}>
