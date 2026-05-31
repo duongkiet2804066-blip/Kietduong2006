@@ -12,7 +12,7 @@ const MenPage = ({ onAddToCart }: MenPageProps) => {
     { id: 103, image: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=600&q=80', title: "Men's Casual Loafers", price: '$99.99' },
     { id: 104, image: 'https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&q=80', title: "Men's Sports Shoes", price: '$129.99' },
     { id: 105, image: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80', title: "Men's Formal Oxfords", price: '$179.99' },
-    { id: 106, image: 'https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=600&q=80', title: "Men's Leather Boots", price: '$189.99' },
+    { id: 106, image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80', title: "Men's Leather Boots", price: '$189.99' },
     { id: 107, image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80', title: "Men's Athletic Trainers", price: '$139.99' },
     { id: 108, image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600&q=80', title: "Men's Vintage Sneakers", price: '$109.99' },
   ];
