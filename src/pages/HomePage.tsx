@@ -15,7 +15,7 @@ const HomePage = ({ onAddToCart, onNavigate }: HomePageProps) => (
     <HeroSection />
     <DiscountSection onNavigate={onNavigate} />
     <FeaturedProducts onAddToCart={onAddToCart} />
-    <CollectionSection />
+    <CollectionSection onNavigate={onNavigate} />
     <LatestProducts onAddToCart={onAddToCart} />
   </main>
 );
