@@ -1,4 +1,8 @@
-const CollectionSection = () => (
+interface CollectionSectionProps {
+  onNavigate?: (page: string) => void;
+}
+
+const CollectionSection = ({ onNavigate }: CollectionSectionProps) => (
   <section className="collection-section py-5">
     <div className="container-lg">
       <h2 className="text-center mb-5">Shop by Collection</h2>
@@ -9,7 +13,12 @@ const CollectionSection = () => (
             <div className="collection-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center text-white">
                 <h3>Men's Collection</h3>
-                <a href="#" className="btn btn-outline-light mt-3">Shop Now</a>
+                <button
+                  onClick={() => onNavigate?.('men')}
+                  className="btn btn-outline-light mt-3"
+                >
+                  Shop Now
+                </button>
               </div>
             </div>
           </div>
@@ -20,7 +29,12 @@ const CollectionSection = () => (
             <div className="collection-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center text-white">
                 <h3>Women's Collection</h3>
-                <a href="#" className="btn btn-outline-light mt-3">Shop Now</a>
+                <button
+                  onClick={() => onNavigate?.('women')}
+                  className="btn btn-outline-light mt-3"
+                >
+                  Shop Now
+                </button>
               </div>
             </div>
           </div>
